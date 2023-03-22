@@ -4,7 +4,7 @@ name: CD Deploy
 
 on:
   push:
-    branches: [ dev ]
+    branches: [ master ]
     
   workflow_dispatch:
 
