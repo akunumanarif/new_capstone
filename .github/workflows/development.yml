@@ -46,4 +46,4 @@ jobs:
             docker compose down
             chmod u+x remove_images.sh
             ./remove_images.sh
-            docker compose up -d
+            docker compose up -d gateway-service
