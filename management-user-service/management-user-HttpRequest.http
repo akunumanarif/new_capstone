@@ -1,0 +1,83 @@
+# get all user
+GET http://localhost:8082/v1/api/users
+Content-Type: application/json
+
+###
+
+# add user endpoint
+POST http://localhost:8082/v1/api/users
+Content-Type: application/json
+
+{
+  "username": "irfanset",
+  "email": "irfanset@gmail.com",
+  "password": "irfanset123",
+  "active": true,
+  "createdby": "system",
+  "lastupdatedby": "system"
+}
+
+###
+# get user by uuid
+GET http://localhost:8082/v1/api/users/9dede466-d92f-4c80-84cb-12b9847ca06b
+Content-Type: application/json
+
+###
+# get user by username
+GET http://localhost:8082/v1/api/users?username=SUPERADMIN
+Content-Type: application/json
+
+###
+#get all roles
+GET http://localhost:8082/v1/api/users/roles
+Content-Type: application/json
+
+###
+#get roles by uuid
+GET http://localhost:8082/v1/api/users/roles/97da98e9-fe3a-4b06-94ad-16f48a8cc852
+Content-Type: application/json
+
+###
+#get all departments
+GET http://localhost:8082/v1/api/users/departments
+Content-Type: application/json
+
+###
+#get departments by uuid
+GET http://localhost:8082/v1/api/users/departments/654e0ecb-3838-4157-b7e4-867916568966
+Content-Type: application/json
+
+###
+# add user role
+POST http://localhost:8082/v1/api/users/roles
+Content-Type: application/json
+
+{
+  "useruuid": "9dede466-d92f-4c80-84cb-12b9847ca06b",
+  "roleuuid": "dbf05dbc-d802-4a31-9ed0-61e62d39a60e"
+}
+
+###
+# delete user role
+DELETE http://localhost:8082/v1/api/users/roles?useruuid=9dede466-d92f-4c80-84cb-12b9847ca06b&roleuuid=dbf05dbc-d802-4a31-9ed0-61e62d39a60e
+Content-Type: application/json
+
+###
+#add user department
+POST http://localhost:8082/v1/api/users/departments
+Content-Type: application/json
+
+{
+  "useruuid": "7fa11c88-5922-49b0-be0d-14c500d466ca",
+  "departmentuuid": "bbf449db-a89a-4533-8625-e37d20076c89"
+}
+
+###
+#delete user department
+DELETE http://localhost:8082/v1/api/users/departments?useruuid=7fa11c88-5922-49b0-be0d-14c500d466ca&departmentuuid=bbf449db-a89a-4533-8625-e37d20076c89
+Content-Type: application/json
+
+###
+#get approval module by name
+GET http://localhost:8082/v1/api/users/approval-module?name=ApprovalHeadDept
+Content-Type: application/json

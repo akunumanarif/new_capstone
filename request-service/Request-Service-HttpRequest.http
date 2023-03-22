@@ -1,0 +1,72 @@
+#get all request type
+GET http://localhost:8084/v1/api/requesttypes
+Accept: application/json
+
+###
+#get request type by uuid
+GET http://localhost:8084/v1/api/requesttypes/4400e94b-aae6-47f7-9b4e-141d92fbdaa1
+Accept: application/json
+
+###
+#get all request
+GET http://localhost:8084/v1/api/requests
+Accept: application/json
+
+###
+#get request by uuid
+GET http://localhost:8084/v1/api/requests/4400e94b-aae6-47f7-9b4e-141d92fbdaa1
+Accept: application/json
+
+###
+#add request
+POST http://localhost:8084/v1/api/requests
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiU1VQRVJBRE1JTiIsImV4cCI6MTY3OTI4MjQxNywiaWF0IjoxNjc5Mjc4ODE3LCJzY29wZSI6IiJ9.biEVZsplm35TNq6A-J3OBz0jUdRp9EhS9INEe7CDunctn3SCzi27Zi3WmGv686KmJSIq5KlJoLDBhHwshTWCphNNclMa0SjSuM4HRpJsWnlQs8INnGEdCAK4F4gP4m8CbAH0p080Bm5RbLswtOdIJ6zXioNAX8rCZ5g8FxkFhscSX1ObwxU5uc6tfmz62CErobrJ5JDsQgI0dDZdXtiqF-w8E5tEU7EU1VWmBXP5aqvH-RIk-W6FhEdUJQ7FZ6LIEDd7zFx2AfWb_eLBdN3A_p_CbpbgJ19Mss2i0jdkAgoq41uVmI8NrH6vDcSpafugkVYRYXtEDiT6rpD4GAvRiw
+
+{
+  "typeUuid": "e93df47d-f5d8-4807-8c55-6b0241c8dec9",
+  "description": "test request 1"
+}
+###
+#Delete requset by uuid
+DELETE http://localhost:8084/v1/api/requests/9e5830c5-9e12-432e-90af-613632546aba
+Accept: application/json
+
+###
+
+###
+#update request type by uuid
+PUT http://localhost:8084/v1/api/requests/95d8fb23-4477-446e-9b26-ee784fa28b69
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJzZWxmIiwic3ViIjoiU1VQRVJBRE1JTiIsImV4cCI6MTY3ODQ2NDc4MCwiaWF0IjoxNjc4NDYxMTgwLCJzY29wZSI6IiJ9.puM864AW6LuAGH45P-7JuCtUTbdkfMUo4Dlck_T4S8pkxAcOwHNaag4Lktk3o6H-qd8XO-h1UBmL5Mot3hPO5GIi1F_g-pli3DgB7M_Fo7aFEBS-C9M4khuR1An52OCNggt4assdtjaXV-Tu5_Rj3HXdkKWgqqA7StCgv4GAd-CirqXeIorkdTEd8edM8yA8KAN-mj2S_6Vr4VQvEcF1Ytcjf2ZpT4opmmHci-NP2LkkS3LQ96JH7WgRzSLg1w3qqeMxw63I_s8MQJ4VRVlXrAdODzeWoYDUP0WRGEpHUsjbey4uQejNfP8-gD6wx9WYcEI-5JFalmiFdrsRbakjqw
+
+{
+  "typeUuid": "e31424dc-3264-4c2a-9be6-c73bb8e3acb3",
+  "description": "testing updated"
+}
+
+###
+#add detail
+POST http://localhost:8084/v1/api/request-details
+Content-Type: application/json
+
+{
+  "desc": "string",
+  "itemUuid": "ae18d913-db43-43d0-ad17-4174f3ee992f",
+  "price": 1,
+  "qty": 8000000.0,
+  "requestUuid": "30a4cb83-522a-4721-be0d-afe4d49bd06a",
+  "serviceUuid": ""
+}
+
+###
+#Delete detail by uuid
+DELETE http://localhost:8084/v1/api/request-details/86f215d0-06de-4f18-9e68-c9c98b8845a3
+Accept: application/json
+
+###
+#get detail by uuid
+GET http://localhost:8084/v1/api/request-details/ccf5d753-451e-4147-88d7-d2314e5d3ce1
+Accept: application/json
+
+###
