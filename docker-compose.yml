@@ -121,8 +121,8 @@ services:
     build:
       context: message-broker-service
       dockerfile: Dockerfile
-    networks:
-      - msg-broker
+#     networks:
+#       - msg-broker
 #  notification-service:
 #    image: 'notification-service:latest'
 #    container_name: notification-service
