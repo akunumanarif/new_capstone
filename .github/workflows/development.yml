@@ -44,4 +44,4 @@ jobs:
             cd ~/capstone-backend
             chmod u+x remove_images.sh
             ./remove_images.sh
-            docker compose up -d gateway-service
+            docker-compose up gateway-service
